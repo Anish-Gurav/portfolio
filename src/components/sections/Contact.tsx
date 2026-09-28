@@ -109,7 +109,7 @@ export function Contact() {
             <form action="https://api.web3forms.com/submit" method="POST" className="space-y-5">
               
               {/* WEB3FORMS ACCESS KEY - Replace this value with your actual key */}
-              <input type="hidden" name="access_key" value="0f9b7499-5436-4482-8526-8cda9353a54e" />
+              <input type="hidden" name="access_key" value="cfb27e53-2c9d-47a9-bee7-2b49c72f0389" />
               
               {/* Optional: Redirect back to your site after sending */}
               <input type="hidden" name="redirect" value="https://anishgurav.vercel.app/#contact" />
