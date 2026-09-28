@@ -5,7 +5,7 @@ export const resumeData: ResumeData = {
   title: 'DevOps & AI Engineer',
   email: 'your.email@example.com',
   phone: '+91 98765 43210',
-  location: 'City, State, India',
+  location: 'Pune, Maharashtra, India',
   linkedin: 'linkedin.com/in/your-profile',
   github: 'github.com/your-username',
   objective:
@@ -13,11 +13,11 @@ export const resumeData: ResumeData = {
 
   education: [
     {
-      degree: 'Bachelor of Technology in Computer Science & Engineering',
-      university: 'Your University Name',
-      year: '2021 — 2025',
+      degree: 'Bachelor of Engineering in Artificial Intelligence and Data Science',
+      university: 'SPPU, Pune ',
+      year: '2022 — 2026',
       cgpa: '8.5/10',
-      location: 'City, State',
+      location: 'Pune, Maharashtra, India',
     },
   ],
 

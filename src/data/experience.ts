@@ -2,9 +2,9 @@ import { Experience } from '@/types';
 
 export const experiences: Experience[] = [
   {
-    role: 'B.Tech in Computer Science & Engineering',
-    company: 'Your University Name',
-    period: '2021 — 2025',
+    role: 'B.E in Artificial Intelligence and Data Science',
+    company: 'SPPU, Pune ',
+    period: '2022 — 2026',
     description:
       'Focused on cloud computing, distributed systems, and machine learning. Active contributor to open-source communities and technical clubs on campus.',
     bullets: [
