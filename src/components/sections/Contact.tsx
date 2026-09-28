@@ -12,7 +12,7 @@ const socialLinks = [
   {
     name: 'GitHub',
     icon: FaGithub,
-    href: 'https://github.com/anish',
+    href: 'https://github.com/Anish-Gurav',
     color: 'hover:text-white',
   },
   {
@@ -30,7 +30,7 @@ const socialLinks = [
   {
     name: 'Email',
     icon: Mail,
-    href: 'mailto:anish@example.com',
+    href: 'mailto:anish.gurav01@gmail.com',
     color: 'hover:text-[#00D4FF]',
   },
 ];
