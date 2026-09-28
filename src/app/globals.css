@@ -89,3 +89,129 @@ body {
 .animate-grain {
   animation: grain 8s steps(10) infinite;
 }
+
+/* ===== NEW ANIMATIONS FOR V2 ===== */
+
+/* Shimmer/shine sweep effect for buttons */
+@keyframes shimmer {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: translateX(-100%) skewX(-15deg);
+}
+
+.shimmer-btn:hover::after {
+  animation: shimmer 0.75s ease-in-out;
+}
+
+/* Floating orb animations for hero */
+@keyframes orb-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -50px) scale(1.05); }
+  50% { transform: translate(-20px, -80px) scale(0.95); }
+  75% { transform: translate(40px, -30px) scale(1.02); }
+}
+
+@keyframes orb-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-40px, 30px) scale(0.98); }
+  50% { transform: translate(50px, 60px) scale(1.04); }
+  75% { transform: translate(-30px, 40px) scale(1); }
+}
+
+@keyframes orb-float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, -40px) scale(1.03); }
+  66% { transform: translate(-40px, 50px) scale(0.97); }
+}
+
+@keyframes orb-float-4 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  20% { transform: translate(-50px, -20px) scale(1.02); }
+  40% { transform: translate(30px, -60px) scale(0.96); }
+  60% { transform: translate(-20px, 40px) scale(1.05); }
+  80% { transform: translate(40px, 20px) scale(0.98); }
+}
+
+.animate-orb-1 { animation: orb-float-1 20s ease-in-out infinite; }
+.animate-orb-2 { animation: orb-float-2 25s ease-in-out infinite; }
+.animate-orb-3 { animation: orb-float-3 18s ease-in-out infinite; }
+.animate-orb-4 { animation: orb-float-4 22s ease-in-out infinite; }
+
+/* Star twinkle animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.3); }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Glow beam under title */
+@keyframes beam-glow {
+  0%, 100% { opacity: 0.4; width: 60%; }
+  50% { opacity: 0.8; width: 80%; }
+}
+
+.animate-beam {
+  animation: beam-glow 3s ease-in-out infinite;
+}
+
+/* Pulse ring animation */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  50% { transform: scale(1.2); opacity: 0; }
+  100% { transform: scale(0.8); opacity: 0; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 3s ease-in-out infinite;
+}
+
+/* Gradient border animation */
+@keyframes gradient-border {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-border {
+  background-size: 200% 200%;
+  animation: gradient-border 4s ease infinite;
+}
+
+/* Reveal from below animation */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-reveal-up {
+  animation: reveal-up 0.8s ease-out forwards;
+}

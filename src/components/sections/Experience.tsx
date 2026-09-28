@@ -8,9 +8,30 @@ import { experiences } from '@/data/experience';
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 md:py-32 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto">
-        <SectionHeading title="Experience & Education" />
+    <section
+      id="experience"
+      className="relative py-24 md:py-32 px-6 md:px-12 overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, #0A1419 0%, #120A14 100%)',
+      }}
+    >
+      {/* Seamless transition from Projects */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#0A1419] to-transparent pointer-events-none" />
+
+      {/* Decorative: subtle radial gradient from center (pink) */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at center, #EC4899 0%, transparent 70%)',
+          opacity: 0.03,
+        }}
+      />
+
+      <div className="relative max-w-6xl mx-auto">
+        <SectionHeading
+          title="Experience & Education"
+          accentGradient="bg-gradient-to-r from-pink-500 to-orange-500"
+        />
 
         <div className="relative mt-16">
           {/* Vertical timeline line */}

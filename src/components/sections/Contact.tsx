@@ -54,11 +54,32 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto">
+    <section
+      id="contact"
+      className="relative py-24 md:py-32 px-6 md:px-12 overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, #120A14 0%, #0A0A0F 100%)',
+      }}
+    >
+      {/* Seamless transition from Experience */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#120A14] to-transparent pointer-events-none" />
+
+      {/* Decorative: subtle grid pattern (like Hero but dimmer) */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          opacity: 0.015,
+          backgroundImage:
+            'linear-gradient(#E4E4E7 1px, transparent 1px), linear-gradient(90deg, #E4E4E7 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+      />
+
+      <div className="relative max-w-6xl mx-auto">
         <SectionHeading
           title="Let's Connect"
           subtitle="Got a project in mind? Let's talk."
+          accentGradient="bg-gradient-to-r from-orange-500 to-cyan-400"
         />
 
         <div className="grid md:grid-cols-2 gap-12 mt-16">

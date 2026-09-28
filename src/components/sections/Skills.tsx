@@ -7,9 +7,31 @@ import { skillCategories } from '@/data/skills';
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 md:py-32 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto">
-        <SectionHeading title="Skills & Tech Stack" />
+    <section
+      id="skills"
+      className="relative py-24 md:py-32 px-6 md:px-12 overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, #0D0A1A 0%, #0F0B24 100%)',
+      }}
+    >
+      {/* Seamless transition from About */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#0D0A1A] to-transparent pointer-events-none" />
+
+      {/* Decorative: subtle diagonal lines pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          opacity: 0.02,
+          backgroundImage:
+            'repeating-linear-gradient(45deg, transparent, transparent 40px, #E4E4E7 40px, #E4E4E7 41px)',
+        }}
+      />
+
+      <div className="relative max-w-6xl mx-auto">
+        <SectionHeading
+          title="Skills & Tech Stack"
+          accentGradient="bg-gradient-to-r from-blue-500 to-purple-500"
+        />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
           {skillCategories.map((category, index) => (

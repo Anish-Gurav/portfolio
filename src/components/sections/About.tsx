@@ -13,9 +13,31 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto">
-        <SectionHeading title="About Me" />
+    <section
+      id="about"
+      className="relative py-24 md:py-32 px-6 md:px-12 overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, #0A0A0F 0%, #0D0A1A 100%)',
+      }}
+    >
+      {/* Seamless transition from Hero */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#0A0A0F] to-transparent pointer-events-none" />
+
+      {/* Decorative: large blurred purple circle on the right */}
+      <div
+        className="absolute top-1/4 -right-32 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{
+          background: '#8B5CF6',
+          opacity: 0.05,
+          filter: 'blur(120px)',
+        }}
+      />
+
+      <div className="relative max-w-6xl mx-auto">
+        <SectionHeading
+          title="About Me"
+          accentGradient="bg-gradient-to-r from-cyan-400 to-blue-500"
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
           {/* Bio */}
