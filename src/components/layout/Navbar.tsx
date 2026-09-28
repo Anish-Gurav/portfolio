@@ -15,7 +15,7 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: FaGithub, href: 'https://github.com/anish', label: 'GitHub' },
+  { icon: FaGithub, href: 'https://github.com/Anish-Gurav', label: 'GitHub' },
   { icon: FaLinkedinIn, href: 'https://linkedin.com/in/anish', label: 'LinkedIn' },
 ];
 
