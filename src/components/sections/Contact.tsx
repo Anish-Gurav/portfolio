@@ -6,7 +6,6 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { GlowCard } from '@/components/ui/GlowCard';
 import { MagneticButton } from '@/components/ui/MagneticButton';
-import { FormEvent, useState } from 'react';
 
 const socialLinks = [
   {
@@ -36,23 +35,6 @@ const socialLinks = [
 ];
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(
-      `Portfolio Contact: ${formData.name}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:anish@example.com?subject=${subject}&body=${body}`;
-  };
-
   return (
     <section
       id="contact"
@@ -91,7 +73,7 @@ export function Contact() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[#71717A] text-lg font-body leading-relaxed mb-8">
-              I&apos;m currently looking for internship and full-time
+              I'm currently looking for internship and full-time
               opportunities in DevOps and AI Engineering. Feel free to reach
               out!
             </p>
@@ -124,7 +106,14 @@ export function Contact() {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form action="https://api.web3forms.com/submit" method="POST" className="space-y-5">
+              
+              {/* WEB3FORMS ACCESS KEY - Replace this value with your actual key */}
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+              
+              {/* Optional: Redirect back to your site after sending */}
+              <input type="hidden" name="redirect" value="https://anishgurav.vercel.app/#contact" />
+
               <div>
                 <label
                   htmlFor="name"
@@ -134,13 +123,10 @@ export function Contact() {
                 </label>
                 <input
                   id="name"
+                  name="name"
                   type="text"
                   required
                   placeholder="Your name"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
                   className="w-full bg-[#111119] border border-[#1a1a2e] rounded-xl px-4 py-3 text-[#E4E4E7] placeholder-[#71717A] focus:border-[#00D4FF] focus:outline-none transition-colors font-body"
                 />
               </div>
@@ -154,13 +140,10 @@ export function Contact() {
                 </label>
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   required
                   placeholder="your@email.com"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
                   className="w-full bg-[#111119] border border-[#1a1a2e] rounded-xl px-4 py-3 text-[#E4E4E7] placeholder-[#71717A] focus:border-[#00D4FF] focus:outline-none transition-colors font-body"
                 />
               </div>
@@ -174,13 +157,10 @@ export function Contact() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   required
                   rows={5}
                   placeholder="Tell me about your project..."
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
                   className="w-full bg-[#111119] border border-[#1a1a2e] rounded-xl px-4 py-3 text-[#E4E4E7] placeholder-[#71717A] focus:border-[#00D4FF] focus:outline-none transition-colors font-body resize-none"
                 />
               </div>
