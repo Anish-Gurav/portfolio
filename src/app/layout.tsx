@@ -27,6 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://anish-portfolio.app'),
   title: 'Anish | DevOps & AI Engineer',
   description:
     'Portfolio of Anish — a DevOps and AI Engineer passionate about building scalable infrastructure, intelligent systems, and elegant developer experiences.',
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
       'Portfolio of Anish — a DevOps and AI Engineer passionate about building scalable infrastructure, intelligent systems, and elegant developer experiences.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://anish.dev',
+    url: 'https://anish-portfolio.app',
     siteName: 'Anish Portfolio',
   },
 };

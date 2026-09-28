@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://anish.dev/sitemap.xml',
+    sitemap: 'https://anish-portfolio.app/sitemap.xml',
   };
 }
